@@ -1,0 +1,99 @@
+/*Common Styles -- Start*/
+
+/*Padding -- Start*/
+
+.padding10{
+	padding:10px !important;
+}
+
+/*Padding -- End*/
+
+
+/*Margins -- Start*/
+.marAuto{
+	margin:auto !important;
+}
+.marTop10{
+	margin-top:10px !important;
+}
+.marTop20{
+	margin-top:20px !important;
+}
+.marBot10{
+	margin-bottom: 10px !important;
+}
+.marBot20{
+	margin-bottom: 20px !important;
+}
+
+/*Margins -- End*/
+
+
+/*Positions -- Start*/
+
+.posRel{
+	position: relative !important;
+}
+.posAbs{
+	position: absolute !important;
+}
+
+/*Positions -- End*/
+
+
+/*Fonts -- Start*/
+.themeFont{
+	font-family: Source Sans Pro !important;
+}
+
+/*Fonts -- End*/
+
+
+
+/*Common Styles -- End*/
+
+/*Header Styles -- Start*/
+
+/*Header Styles -- End*/
+
+/*Page Content Style -- Start*/
+
+/*Shirt Design Styles -- Start*/
+
+#page-container{
+	position: relative;
+	top: 60px;
+}
+
+.shirtoverview{
+	position: relative;
+	width: 422px;
+	height: 463px;
+
+}
+.shirtAdds,.shirtdesignSelection{
+	position: relative;
+	height: 463px;
+}
+
+/*#applyFilter{
+	width: 107px !important;
+    margin-top: 10px !important;
+    border-radius: 5px !important;
+}*/
+
+/*Shirt Design Styles -- End*/
+
+/*Page Content Style -- End*/
+
+/*Footer Styles -- Start*/
+
+footer{
+	position: relative;
+	width: 100%;
+	background-color: #e7e7e7;
+	padding:10px;
+	top: 70px;
+}
+
+/*Footer Styles -- End*/
