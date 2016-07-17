@@ -222,6 +222,9 @@
 .subsectionStyle{
 	border-left: none;
 }
+.collarStyles{
+	display: none;
+}
 
 /*#applyFilter{
 	width: 107px !important;

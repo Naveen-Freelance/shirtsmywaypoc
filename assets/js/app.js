@@ -1,7 +1,8 @@
 $(document).ready(function(){
+	var referenceValue = '';
 	var imageSrcArray = ['//www.shirtsmyway.com/graphics/reference/fabrics/smallphoto/c11_reference_fabrics_smallphoto.jpg','//www.shirtsmyway.com/graphics/reference/fabrics/smallphoto/c10_reference_fabrics_smallphoto.jpg'];
 
-	var shirtBitsImageArray = ['//www.shirtsmyway.com/graphics/view1/base/tail/c9_view1_base_tail.gif','//www.shirtsmyway.com/graphics/view1/collar/classic/collar/c9_view1_collar_classic_collar.gif','//www.shirtsmyway.com/graphics/view1/placket/placket/standard/c9_view1_placket_placket_standard.gif','//www.shirtsmyway.com/graphics/view1/innerback/c9_view1_innerback.gif','//www.shirtsmyway.com/graphics/view1/pocket/pocket/angle/c9_view1_pocket_pocket_angle.gif','//www.shirtsmyway.com/graphics/view1/cuffs/right/cuffs/c9_view1_cuffs_right_cuffs.gif','//www.shirtsmyway.com/graphics/view1/cuffs/left/1buttonangle/cuffs/c9_view1_cuffs_left_1buttonangle_cuffs.gif','//www.shirtsmyway.com/graphics/view1/base/tail/c11_view1_base_tail.gif','//www.shirtsmyway.com/graphics/view1/innerback/c11_view1_innerback.gif','//www.shirtsmyway.com/graphics/view1/sleeves/long/c11_view1_sleeves_long.gif','//www.shirtsmyway.com/graphics/view1/pocket/pocket/angle/c11_view1_pocket_pocket_angle.gif','//www.shirtsmyway.com/graphics/view1/cuffs/left/1buttonangle/cuffs/c11_view1_cuffs_left_1buttonangle_cuffs.gif','//www.shirtsmyway.com/graphics/view1/cuffs/left/1buttonangle/innercuffs/c11_view1_cuffs_left_1buttonangle_innercuffs.gif','//www.shirtsmyway.com/graphics/view1/cuffs/right/cuffs/c11_view1_cuffs_right_cuffs.gif','//www.shirtsmyway.com/graphics/view1/cuffs/right/innercuffs/c11_view1_cuffs_right_innercuffs.gif','//www.shirtsmyway.com/graphics/view1/placket/placket/standard/c11_view1_placket_placket_standard.gif','//www.shirtsmyway.com/graphics/view1/collar/classic/collar/c11_view1_collar_classic_collar.gif','//www.shirtsmyway.com/graphics/view1/collar/classic/innercollar/c11_view1_collar_classic_innercollar.gif','//www.shirtsmyway.com/graphics/view1/base/tail/c10_view1_base_tail.gif','//www.shirtsmyway.com/graphics/view1/innerback/c10_view1_innerback.gif','//www.shirtsmyway.com/graphics/view1/sleeves/long/c10_view1_sleeves_long.gif','//www.shirtsmyway.com/graphics/view1/pocket/pocket/angle/c10_view1_pocket_pocket_angle.gif','//www.shirtsmyway.com/graphics/view1/cuffs/left/1buttonangle/cuffs/c10_view1_cuffs_left_1buttonangle_cuffs.gif','//www.shirtsmyway.com/graphics/view1/cuffs/left/1buttonangle/innercuffs/c10_view1_cuffs_left_1buttonangle_innercuffs.gif','//www.shirtsmyway.com/graphics/view1/cuffs/right/cuffs/c10_view1_cuffs_right_cuffs.gif','//www.shirtsmyway.com/graphics/view1/placket/placket/standard/c10_view1_placket_placket_standard.gif','//www.shirtsmyway.com/graphics/view1/collar/classic/collar/c10_view1_collar_classic_collar.gif','//www.shirtsmyway.com/graphics/view1/collar/classic/innercollar/c10_view1_collar_classic_innercollar.gif'];
+	var shirtBitsImageArray = ['//www.shirtsmyway.com/graphics/view1/base/tail/c9_view1_base_tail.gif','//www.shirtsmyway.com/graphics/view1/collar/classic/collar/c9_view1_collar_classic_collar.gif','//www.shirtsmyway.com/graphics/view1/placket/placket/standard/c9_view1_placket_placket_standard.gif','//www.shirtsmyway.com/graphics/view1/innerback/c9_view1_innerback.gif','//www.shirtsmyway.com/graphics/view1/pocket/pocket/angle/c9_view1_pocket_pocket_angle.gif','//www.shirtsmyway.com/graphics/view1/cuffs/right/cuffs/c9_view1_cuffs_right_cuffs.gif','//www.shirtsmyway.com/graphics/view1/cuffs/left/1buttonangle/cuffs/c9_view1_cuffs_left_1buttonangle_cuffs.gif','//www.shirtsmyway.com/graphics/view1/base/tail/c11_view1_base_tail.gif','//www.shirtsmyway.com/graphics/view1/innerback/c11_view1_innerback.gif','//www.shirtsmyway.com/graphics/view1/sleeves/long/c11_view1_sleeves_long.gif','//www.shirtsmyway.com/graphics/view1/pocket/pocket/angle/c11_view1_pocket_pocket_angle.gif','//www.shirtsmyway.com/graphics/view1/cuffs/left/1buttonangle/cuffs/c11_view1_cuffs_left_1buttonangle_cuffs.gif','//www.shirtsmyway.com/graphics/view1/cuffs/left/1buttonangle/innercuffs/c11_view1_cuffs_left_1buttonangle_innercuffs.gif','//www.shirtsmyway.com/graphics/view1/cuffs/right/cuffs/c11_view1_cuffs_right_cuffs.gif','//www.shirtsmyway.com/graphics/view1/cuffs/right/innercuffs/c11_view1_cuffs_right_innercuffs.gif','//www.shirtsmyway.com/graphics/view1/placket/placket/standard/c11_view1_placket_placket_standard.gif','//www.shirtsmyway.com/graphics/view1/collar/classic/collar/c11_view1_collar_classic_collar.gif','//www.shirtsmyway.com/graphics/view1/collar/classic/innercollar/c11_view1_collar_classic_innercollar.gif','//www.shirtsmyway.com/graphics/view1/base/tail/c10_view1_base_tail.gif','//www.shirtsmyway.com/graphics/view1/innerback/c10_view1_innerback.gif','//www.shirtsmyway.com/graphics/view1/sleeves/long/c10_view1_sleeves_long.gif','//www.shirtsmyway.com/graphics/view1/pocket/pocket/angle/c10_view1_pocket_pocket_angle.gif','//www.shirtsmyway.com/graphics/view1/cuffs/left/1buttonangle/cuffs/c10_view1_cuffs_left_1buttonangle_cuffs.gif','//www.shirtsmyway.com/graphics/view1/cuffs/left/1buttonangle/innercuffs/c10_view1_cuffs_left_1buttonangle_innercuffs.gif','//www.shirtsmyway.com/graphics/view1/cuffs/right/cuffs/c10_view1_cuffs_right_cuffs.gif','//www.shirtsmyway.com/graphics/view1/placket/placket/standard/c10_view1_placket_placket_standard.gif','//www.shirtsmyway.com/graphics/view1/collar/classic/collar/c10_view1_collar_classic_collar.gif','//www.shirtsmyway.com/graphics/view1/collar/classic/innercollar/c10_view1_collar_classic_innercollar.gif','//www.shirtsmyway.com/graphics/view1/collar/cutaway/collar/c10_view1_collar_cutaway_collar.gif','//www.shirtsmyway.com/graphics/view1/collar/cutaway/collar/c11_view1_collar_cutaway_collar.gif','//www.shirtsmyway.com/graphics/view1/collar/longpoint/collar/c11_view1_collar_longpoint_collar.gif','//www.shirtsmyway.com/graphics/view1/collar/longpoint/collar/c10_view1_collar_longpoint_collar.gif'];
 	
 	var referenceValue = '';
 
@@ -10,19 +11,19 @@ $(document).ready(function(){
         trigger : 'hover'
     });
 	
-	$('.fabricSample').click(function(e){
-		e.preventDefault();
-		var imgSrc = $(this).attr('src').substr(58,3);
-		console.log(imgSrc);
-		referenceValue = imgSrc;
-		//console.log('imgSrc',imgSrc.substring(58,2));
-		for(var imagesrc in imageSrcArray){
-			//console.log(imageSrcArray[imagesrc]);
-			if(imageSrcArray[imagesrc].search(imgSrc) != -1 ){
-				$('.refFabric').attr('src',imageSrcArray[imagesrc]);
-			}
-		}
-	});
+	// $('.fabricSample').click(function(e){
+	// 	e.preventDefault();
+	// 	var imgSrc = $(this).attr('src').substr(58,3);
+	// 	console.log(imgSrc);
+	// 	referenceValue = imgSrc;
+	// 	//console.log('imgSrc',imgSrc.substring(58,2));
+	// 	for(var imagesrc in imageSrcArray){
+	// 		//console.log(imageSrcArray[imagesrc]);
+	// 		if(imageSrcArray[imagesrc].search(imgSrc) != -1 ){
+	// 			$('.refFabric').attr('src',imageSrcArray[imagesrc]);
+	// 		}
+	// 	}
+	// });
 
 	$('.apply_button').click(function(e){
 		var selectedDropDownVal = $("#applyFilter").val();
@@ -232,10 +233,49 @@ $(document).ready(function(){
 		}
 	});
 
+	$('.collar-style-cutway').click(function(e){
+		e.preventDefault();
+		console.log($(this).find('img.cutway').attr('src').substr(41,15));
+		console.log($(this).find('p.cutway').text());
+		if(referenceValue){
+			var indexValue = referenceValue+'_';
+			for(var shirtBit in shirtBitsImageArray){
+					if(shirtBitsImageArray[shirtBit].search('collar') != -1 && shirtBitsImageArray[shirtBit].search(referenceValue) != -1){
+						if(shirtBitsImageArray[shirtBit].search('/cutaway/collar/') != -1){
+							console.log(shirtBitsImageArray[shirtBit]);
+							$('.collar').attr('src','//www.shirtsmyway.com/graphics/view1/collar/cutaway/collar/'+indexValue+'view1_collar_cutaway_collar.gif');
+						}
+						// if(shirtBitsImageArray[shirtBit].search('/classic/innercollar/') != -1){
+						// 	$('.innercollar').attr('src','//www.shirtsmyway.com/graphics/view1/collar/classic/innercollar/'+indexValue+'view1_collar_classic_innercollar.gif');
+						// }
+					}
+				}
+		}
+	});
+	$('.collar-style-longpoint').click(function(e){
+		e.preventDefault();
+		console.log($(this).find('img.longpoint').attr('src').substr(41,17));
+		console.log($(this).find('p.longpoint').text());
+		if(referenceValue){
+			var indexValue = referenceValue+'_';
+			for(var shirtBit in shirtBitsImageArray){
+					if(shirtBitsImageArray[shirtBit].search('collar') != -1 && shirtBitsImageArray[shirtBit].search(referenceValue) != -1){
+						if(shirtBitsImageArray[shirtBit].search('/longpoint/collar/') != -1){
+							console.log(shirtBitsImageArray[shirtBit]);
+							$('.collar').attr('src','//www.shirtsmyway.com/graphics/view1/collar/longpoint/collar/'+indexValue+'view1_collar_longpoint_collar.gif');
+						}
+						// if(shirtBitsImageArray[shirtBit].search('/classic/innercollar/') != -1){
+						// 	$('.innercollar').attr('src','//www.shirtsmyway.com/graphics/view1/collar/classic/innercollar/'+indexValue+'view1_collar_classic_innercollar.gif');
+						// }
+					}
+				}
+		}
+	});
+
 	$('.fabricSample').click(function(e){
 		e.preventDefault();
 		//$()
-		var referenceValue = $(this).attr('src').substr(58,3);
+		referenceValue = $(this).attr('src').substr(58,3);
 		console.log(referenceValue);
 		var indexValue = referenceValue+'_';
 		var selectedSegment = $('.panel-content .hiddenTextBox').val();
@@ -258,9 +298,9 @@ $(document).ready(function(){
 							console.log(shirtBitsImageArray[shirtBit]);
 							$('.collar').attr('src',shirtBitsImageArray[shirtBit]);
 						}
-						if(shirtBitsImageArray[shirtBit].search('/classic/innercollar/') != -1){
-							$('.innercollar').attr('src','//www.shirtsmyway.com/graphics/view1/collar/classic/innercollar/'+indexValue+'view1_collar_classic_innercollar.gif');
-						}
+						// if(shirtBitsImageArray[shirtBit].search('/classic/innercollar/') != -1){
+						// 	$('.innercollar').attr('src','//www.shirtsmyway.com/graphics/view1/collar/classic/innercollar/'+indexValue+'view1_collar_classic_innercollar.gif');
+						// }
 					}
 				}
 			break;
@@ -456,6 +496,8 @@ $(document).ready(function(){
 		var $subsection = $('.subsection');
 		$('.panel-content .title-area').html('Pick Your Base');
 		$('.panel-content .hiddenTextBox').val('base');
+		$('.subsectionFabric').css('background-color','#d7d7d7');
+		backgroundColorChange();
 		$('.submenufabric').html('Base Fabric');
 		$('.submenuStyle').html('Base Style');
 		$subsection.show();
@@ -486,6 +528,7 @@ $(document).ready(function(){
 		var $subsection = $('.subsection');
 		$('.panel-content .title-area').html('Pick Your Placket');
 		$('.panel-content .hiddenTextBox').val('placket');
+		backgroundColorChange();
 		//$('.submenufabric').html('Base Fabric');
 		//$('.submenuStyle').html('Base Style');
 		$subsection.hide();
@@ -499,8 +542,10 @@ $(document).ready(function(){
 		$(this).addClass('act');
 		var $panelContents  = $('.panel-content');
 		var $subsection = $('.subsection');
+		$('.submenufabric').css('background-color','#d7d7d7');
 		$('.panel-content .title-area').html('Pick Your Pocket');
 		$('.panel-content .hiddenTextBox').val('pocket');
+		backgroundColorChange();
 		$('.submenufabric').html('Pocket Fabric');
 		$('.submenuStyle').html('Pocket Style');
 		$subsection.show();
@@ -514,10 +559,12 @@ $(document).ready(function(){
 		$(this).addClass('act');
 		var $panelContents  = $('.panel-content');
 		var $subsection = $('.subsection');
+		$('.submenufabric').css('background-color','#d7d7d7');
 		$('.panel-content .title-area').html('Pick Your Collar');
 		$('.panel-content .hiddenTextBox').val('collar');
+		backgroundColorChange();
 		$('.submenufabric').html('Collar Fabric');
-		$('.submenuStyle').html('Coolar Style');
+		$('.submenuStyle').html('Collar Style');
 		$subsection.show();
 		// var isDisplay = $panelContents.css('display');
 		// if(isVisible == true && isDisplay == 'none'){
@@ -531,6 +578,7 @@ $(document).ready(function(){
 		var $subsection = $('.subsection');
 		$('.panel-content .title-area').html('Pick Your Cuffs');
 		$('.panel-content .hiddenTextBox').val('cuffs');
+		backgroundColorChange();
 		//$('.submenufabric').html('Collar Fabric');
 		//$('.submenuStyle').html('Coolar Style');
 		$subsection.hide();
@@ -546,6 +594,7 @@ $(document).ready(function(){
 		var $subsection = $('.subsection');
 		$('.panel-content .title-area').html('Pick Inner Cuffs');
 		$('.panel-content .hiddenTextBox').val('innerCuffs');
+		backgroundColorChange();
 		//$('.submenufabric').html('Collar Fabric');
 		//$('.submenuStyle').html('Coolar Style');
 		$subsection.hide();
@@ -554,5 +603,54 @@ $(document).ready(function(){
 		// 	$panelContents.css('display','block');
 		// }
 	});
+
+	// subsection Selection
+
+	$('.subsectionStyle').click(function(e){
+		e.preventDefault();
+		var innerText = $(this).find('h4').text();
+		if(innerText == 'Collar Style'){
+			$('.subsectionStyle').css('background-color','#d7d7d7');
+			$('.submenuStyle').css('background-color','#d7d7d7');
+			$('.subsectionFabric').css('background-color','white');
+			$('.submenufabric').css('background-color','white');
+			$('.fabricImages').css('display','none');
+			$('.collarStyles').css('display','block');
+			// for(var shirtBit in shirtBitsImageArray){
+			// 	if(shirtBitsImageArray[shirtBit].search('collar') != -1 && shirtBitsImageArray[shirtBit].search(referenceValue) != -1){
+			// 		if(shirtBitsImageArray[shirtBit].search('/classic/collar/') != -1){
+			// 			console.log(shirtBitsImageArray[shirtBit]);
+			// 			$('.collar').attr('src',shirtBitsImageArray[shirtBit]);
+			// 		}
+			// 		if(shirtBitsImageArray[shirtBit].search('/classic/innercollar/') != -1){
+			// 			$('.innercollar').attr('src','//www.shirtsmyway.com/graphics/view1/collar/classic/innercollar/'+indexValue+'view1_collar_classic_innercollar.gif');
+			// 		}
+			// 	}
+			// }
+		}
+	});
+
+	$('.subsectionFabric').click(function(e){
+		e.preventDefault();
+		var innerText = $(this).find('h4').text();
+		if(innerText == 'Collar Fabric'){
+			$('.subsectionFabric').css('background-color','#d7d7d7');
+			$('.submenufabric').css('background-color','#d7d7d7');
+			$('.subsectionStyle').css('background-color','white');
+			$('.submenuStyle').css('background-color','white');
+			$('.fabricImages').css('display','block');
+			$('.collarStyles').css('display','none');
+		}
+		
+	});
 	
 });
+
+function backgroundColorChange(argument) {
+	$('.subsectionFabric').css('background-color','#d7d7d7');
+	$('.submenufabric').css('background-color','#d7d7d7');
+	$('.subsectionStyle').css('background-color','white');
+	$('.submenuStyle').css('background-color','white');
+	$('.fabricImages').css('display','block');
+	$('.collarStyles').css('display','none');
+}
