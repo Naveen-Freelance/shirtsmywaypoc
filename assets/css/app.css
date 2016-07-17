@@ -38,6 +38,10 @@
 	position: absolute !important;
 }
 
+.left {
+    float: left!important;
+}
+
 /*Positions -- End*/
 
 
@@ -48,7 +52,18 @@
 
 /*Fonts -- End*/
 
-
+.label {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
 
 /*Common Styles -- End*/
 
@@ -62,7 +77,7 @@
 
 #page-container{
 	position: relative;
-	top: 60px;
+	top: 50px;
 }
 
 .shirtoverview{
@@ -74,6 +89,138 @@
 .shirtAdds,.shirtdesignSelection{
 	position: relative;
 	height: 463px;
+}
+
+/*Right Area*/
+.right-area{
+	border-left: 1px solid #d7d7d7;
+    width: 90%;
+    position: absolute;
+    right: 0px;
+    z-index: 100;
+    background: #fff;
+    border-bottom: 1px solid #d7d7d7;
+    border-right: 1px solid #d7d7d7;
+    height: 100%;
+    border-radius: 0px 0px 0px 5px;
+}
+
+.right-area .price-box .shirt-title{
+	margin-left: 22px;
+    font-size: 22px;
+    color: #111;
+    width: 370px;
+    height: 30px;
+    overflow: hidden;
+    margin-top: 10px;
+    font-weight: bold
+}
+.right-area .price-box .price {
+    text-align: left;
+    font-size: 22px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.right-area .currency-area {
+    position: absolute;
+    margin-left: 237px;
+    margin-top: -5px;
+}
+
+.right-area .price-box .price .real-price {
+    margin-top: 2px;
+}
+.right-area .price-box .price .root-price {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.right-area .price-box .price .real-price .value {
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.right-area .steps{
+	text-align: center;
+    position: absolute;
+    top:100px;
+    width: 30px;
+    margin-left: -30px;
+    background: #fff;
+    border-radius: 5px 0px 0px 0px;
+}
+.right-area .steps .step.base{
+	border-radius: 5px 0px 0px 0px;
+    border-top: 1px solid #d7d7d7;
+}
+
+.right-area .steps .step{
+	background: url('../images/bg-img-1.png') -88px -98px no-repeat;
+	height: 30px;
+    border-bottom: 1px solid #d7d7d7;
+    border-left: 1px solid #d7d7d7;
+    border-right: 1px solid #d7d7d7;
+}
+
+.right-area .steps .step.act {
+    background: url('../images/bg-img.png') -32px -168px no-repeat;
+}
+
+.popover{
+    background-color: black;
+   	color: white;
+   	width:120px;
+   	text-align: center;
+}
+.popover.left>.arrow:after{
+	border-left-color: black !important;
+}
+
+
+#shirtLeftToolbox {
+    position: relative;
+    border-top: 1px solid #d7d7d7;
+    top:50px;
+}
+
+#shirtLeftToolbox .panel-content {
+    width: 390px;
+    margin-left: 20px;
+}
+
+#shirtLeftToolbox .panel-content .title-area {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+    margin-top: 5px;
+}
+
+#shirtLeftToolbox .shortcut-content {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    z-index: 1000;
+}
+#shirtLeftToolbox .shortcut-content {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.subsectionFabric,.subsectionStyle{
+	border: 1px solid #d7d7d7;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+}
+.subsectionFabric{
+	background-color: #d7d7d7;
+}
+.subsectionStyle{
+	border-left: none;
 }
 
 /*#applyFilter{

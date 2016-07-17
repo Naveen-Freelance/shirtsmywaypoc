@@ -18,12 +18,12 @@
 	            <span class="icon-bar"></span>
 	            <span class="icon-bar"></span>
 	          </button>
-	          <a class="navbar-brand" href="#">ShirtsMyWay</a>
+	          <a class="navbar-brand" href="#">BrandonWay</a>
 	        </div>
 	        <div id="navbar" class="navbar-collapse collapse">
 	          <ul class="nav navbar-nav">
 	            <li class="active"><a href="#">Home</a></li>
-	            <li><a href="#about">About</a></li>
+	            <!-- <li><a href="#about">About</a></li>
 	            <li><a href="#contact">Contact</a></li>
 	            <li class="dropdown">
 	              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -36,13 +36,13 @@
 	                <li><a href="#">Separated link</a></li>
 	                <li><a href="#">One more separated link</a></li>
 	              </ul>
-	            </li>
+	            </li> -->
 	          </ul>
-	          <ul class="nav navbar-nav navbar-right">
+	          <!-- <ul class="nav navbar-nav navbar-right">
 	            <li><a href="../navbar/">Default</a></li>
 	            <li><a href="../navbar-static-top/">Static top</a></li>
 	            <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
-	          </ul>
+	          </ul> -->
 	        </div><!--/.nav-collapse -->
 	      </div>
 	    </nav>
@@ -76,53 +76,70 @@
 					</div>
 				</div>
 				<div class="col-md-5 shirtdesignSelection">
-					<div class="posRel">
-						<div class="previewFabric col-md-4">
-							<div style="width:112px;height:100px">
-								<img class="refFabric" src="//www.shirtsmyway.com/graphics/reference/fabrics/smallphoto/a11_reference_fabrics_smallphoto.jpg" style="max-width:100%;max-height:100%;">
+					<div class="right-area">
+						<div class="price-box">
+							<div class="shirt-title">Test Fabric</div>
+							<div class="price">
+								<div class="real-price left"> 
+									<span class="label"></span><span class="value" value="69.00">RM272.85</span>
+								</div>
+								<div class="root-price left">
+									<span class="label"></span><span class="value" value="69.00" style="display: none;">RM272.85</span>
+								</div>
+								<div class="clear"></div>
 							</div>
 						</div>
-						<div class="previewFabricDropDown col-md-3">
-							<img src="assets/images/note.jpg" />
-							<select id="applyFilter" style="width:107px;margin-top:10px;border-radius:3px;">
-				              <option class="all_class" value="all">All</option>                  
-			                  <option class="base_class" value="base">Base</option>                  
-			                  <option value="collar">Collar</option>                  
-			                  <!-- <option value="innercollar">Inner Collar</option> -->                  
-			                  <option value="placket">Placket</option>                  
-			                  <option class="pocket" value="pocket">Pocket</option>                  
-			                  <!-- <option value="yoke">Yoke</option> -->                  
-			                  <option class="long_sleeve" value="cuffs">Cuffs</option>                  
-			                  <option class="long_sleeve" value="leftCuffs">L. Cuff</option>                  
-			                  <option class="long_sleeve" value="rightCuffs">R. Cuff</option>                  
-			                  <option class="long_sleeve" value="innerCuffs">Inner Cuffs</option>                  
-			                  <option class="long_sleeve" value="leftInnerCuffs">L. Inner Cuff</option>                  
-			                  <option class="long_sleeve" value="rightInnerCuffs">R. Inner Cuff</option>                  
-			                  <option class="shoulder_loops" value="shoulder_loops" style="display:none">Shoulder Loops</option>                                                                                        <option class="short_sleeve" value="sleeve_ending" style="display:none">Sleeve End.</option>  
-			                  <option class="short_sleeve" value="sleeve_ending_left" style="display:none">L. Sleeve End.</option>                  
-			                  <option class="short_sleeve" value="sleeve_ending_right" style="display:none">R. Sleeve End.</option>        
-			      			</select>
-			      			<img class="apply_button marTop10" style="cursor:pointer;" src="assets/images/apply.jpg">
+						<div class="steps">
+							<div class="step base baseall act" data-toggle="popover" data-content="Fabric" name="all" original-title="Pick fabric">
+								
+							</div>
+							<div class="step base" data-toggle="popover" data-content="Base" name="base" original-title="Base">
+								
+							</div>
+							<div class="step placket" name="placket" data-toggle="popover" data-content="Placket"></div>
+							<!-- <div class="step collar-type" name="collar-type" data-toggle="popover" data-content="Collar"></div> -->
+							<div class="step pocket" name="pocket" data-toggle="popover" data-content="Pocket"></div>
+							<!-- <div class="step buttons" name="buttons" data-toggle="popover" data-content="Custom Buttons"></div> -->
+							<div class="step collar" name="collar" data-toggle="popover" data-content="Collar"></div>
+							<!-- <div class="step inner-collar-fabric" name="inner-collar-fabric" original-title="Inner Collar Fabric"></div> -->
+							<!-- <div class="step collar-fabric" name="collar-fabric" data-toggle="popover" data-content="Outer Collar Fabric"></div> -->
+							<div class="step cuffs" style="" name="cuffs" data-toggle="popover" data-content="Cuffs"></div>
+							<div class="step inner-cuffs" style="" name="inner-cuffs-fabric" data-toggle="popover" data-content="Inner Cuffs"></div>
+							<!-- <div class="step cuffs-fabric" style="" name="cuffs-fabric" data-toggle="popover" data-content="Outer Cuffs Fabric"></div> -->
+							<!-- <div class="step inner-buttons-fabric" name="inner-buttons-fabric" data-toggle="popover" data-content="Buttons Fabric"></div> -->
+							<!-- <div class="step pocket-fabric" name="pocket-fabric" data-toggle="popover" data-content="Pocket Fabric" style="display: none;"></div> -->
+							<!-- <div class="step back" name="back" data-toggle="popover" data-content="Shirt Back"></div>
+							<div class="step monogram" name="monogram" data-toggle="popover" data-content="Monogram"></div> -->
+							<!-- <div class="step done3" name="done3" data-toggle="popover" data-content="You're done!"></div> -->
 						</div>
-						<div class="col-md-5">
-							<p style="font-size:14px;margin-top:-5px;">Peace Maker</p>
-							<p style="font-size:11px;">Peace Maker - This white fabric has a nice plain weave that will serve well at all occasions. It is made up of 100% cotton and 60 yarn count.</p>
+						<div id="shirtLeftToolbox">
+							<div class="panel-content">
+								<div class="title-area">Pick Your Fabric</div>
+								<input class="hiddenTextBox" type="hidden" value="all">
+								<div class="shortcut-contents">
+									<div class="shortcut-content col-md-12" subtitle="CHOOSE YOUR STYLE">
+										<div class="subsection" style="display:none;">
+											<div class="col-md-6 subsectionFabric" style="margin-bottom:15px;">
+												<!-- <button type="button" style="width:100%;" class="submenufabric btn btn-primary">Fabric</button> -->
+												<h4 class="submenufabric">Fabric</h4>
+											</div>
+											<div class="col-md-6 subsectionStyle" style="margin-bottom:15px;">
+												<!-- <button type="button" style="width:100%;" class="btn btn-secondary submenuStyle">Style</button> -->
+												<h4 class="submenuStyle">Fabric</h4>
+											</div>
+										</div>
+										<div class="col-md-4" style="cursor:pointer;margin-bottom:10px;">
+											<img class="fabricSample" src="//www.shirtsmyway.com/graphics/reference/fabrics/swatches/c10_reference_fabrics_swatches.gif" style="max-width:100%;">
+										</div>
+										<div class="col-md-4" style="cursor:pointer;">
+											<img class="fabricSample" src="//www.shirtsmyway.com/graphics/reference/fabrics/swatches/c11_reference_fabrics_swatches.gif" style="max-width:100%;">
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="fabricGrid">
-						<!-- <div class="col-md-3" style="height:110px;cursor:pointer;">
-							<img class="fabricSample" src="//www.shirtsmyway.com/graphics/reference/fabrics/swatches/c9_reference_fabrics_swatches.gif" style="max-width:100%;">
-						</div> -->
-						<div class="col-md-3" style="height:110px;cursor:pointer;">
-							<img class="fabricSample" src="//www.shirtsmyway.com/graphics/reference/fabrics/swatches/c10_reference_fabrics_swatches.gif" style="max-width:100%;">
-						</div>
-						<div class="col-md-3" style="height:110px;cursor:pointer;">
-							<img class="fabricSample" src="//www.shirtsmyway.com/graphics/reference/fabrics/swatches/c11_reference_fabrics_swatches.gif" style="max-width:100%;">
-						</div>
-						<!-- <div class="col-md-3" style="height:110px;cursor:pointer;">
-							<img class="fabricSample" src="//www.shirtsmyway.com/graphics/reference/fabrics/swatches/c12_reference_fabrics_swatches.gif" style="max-width:100%;">
-						</div> -->
-					</div>
+
 				</div>
 			</div>
 		</div>
@@ -131,7 +148,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="copyright themeFont">2016 © <a href="#">shirtsmyway.com</a> All rights reserved.</div>
+					<div class="copyright themeFont">2016 © <a href="#">BrandonWay.com</a> All rights reserved.</div>
 				</div>
 			</div>
 		</div>
